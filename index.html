@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Automático</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #415aa6;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 300px;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="text"]::placeholder {
+            color: #aaa;
+        }
+        #downloadBtn {
+            background-color: #415aa6;
+            color: #fcfcfd;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        #downloadBtn:hover {
+            background-color: #314a85;
+        }
+        #canvas {
+            border: 2px solid #415aa6;
+            margin-top: 20px;
+            max-width: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Editor Automático</h1>
+    
+    <!-- Casilleros para la información -->
+    <div class="input-group">
+        <label for="nameInput">Nombre:</label>
+        <input type="text" id="nameInput" placeholder="Nombre">
+    </div>
+    <div class="input-group">
+        <label for="sexInput">Sexo:</label>
+        <input type="text" id="sexInput" placeholder="Sexo">
+    </div>
+    <div class="input-group">
+        <label for="ageInput">Edad:</label>
+        <input type="text" id="ageInput" placeholder="Edad">
+    </div>
+    <div class="input-group">
+        <label for="contactInput">Número de contacto:</label>
+        <input type="text" id="contactInput" placeholder="Número de contacto">
+    </div>
+    <div class="input-group">
+        <label for="specialInput">Característica especial:</label>
+        <input type="text" id="specialInput" placeholder="Característica especial">
+    </div>
+    <div class="input-group">
+        <label for="zonaInput">Zona:</label>
+        <input type="text" id="zonaInput" placeholder="Zona">
+    </div>
+    <div class="input-group">
+        <input type="file" id="imageUpload" accept="image/*">
+    </div>
+    
+    <canvas id="canvas"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
